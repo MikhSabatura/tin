@@ -1,0 +1,25 @@
+img {
+    width: 300px;
+    height: 200px;
+}
+
+p {
+    font-size: 17px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+table, th, td {
+    border: 1px solid green;
+    border-style: dashed;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-image: url(https://www.google.com/s2/favicons?domain=www.google.com)
+}

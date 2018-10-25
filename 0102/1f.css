@@ -1,0 +1,41 @@
+body {
+    background-color: bisque;
+}
+
+article>h1 {
+    font-size: 20pt;
+    margin-left: 10%;
+    text-decoration: underline;
+}
+
+article>p {
+    margin-left: 12%;
+    margin-right: 12%;
+    border: 2px solid white;
+    background-color: rgb(255, 170, 170);
+    padding: 10px;
+}
+
+a:hover {
+    color: red;
+}
+
+#banner {
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    display: block;
+    border: 3px solid red;
+}
+
+#content {
+    margin-left: 15%;
+    margin-right: 15%;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+#content>h1 {
+    text-align: center;
+}

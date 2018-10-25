@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+}
+
+/* Define style and size of font for form elements */
+form {
+    font-style: oblique;
+    font-size: 14pt;
+}
+
+/* Define colors for field labels */
+label.required {
+    color: red;
+}

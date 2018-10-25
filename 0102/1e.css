@@ -1,0 +1,30 @@
+img {
+    width: 25%;
+    height: 25%;
+}
+
+#col-left {
+    width: 50%;
+    float: left;
+}
+
+#col-right {
+    width: 50%;
+    float: right;
+}
+
+#footer {
+    clear: both;
+}
+
+#col-left>img {
+    float: left;
+}
+
+#col-right>img {
+    float: right;
+}
+
+#footer>img {
+    float: left;
+}
