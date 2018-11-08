@@ -2,15 +2,16 @@ var studentPrototype = {
     courses: ["math", "js", "sudcidal tendecies management"]
 };
 
-function Student(id, firstName, lastName) {
-    this.id = id;
-    this.lastName = lastName;
-    this.firstName = firstName;
+function createStudent(base, id, firstName, lastName) {
+    let result = Object.create(base);
+    result.id = id;
+    result.lastName = lastName;
+    result.firstName = firstName;
+    return result;
 }
-Student.prototype = studentPrototype;
 
-var student1 = new Student(1, "Andrew", "Andrews");
-var student2 = new Student(2, "Bill", "Billson");
+var student1 = createStudent(studentPrototype, 1, "Andrew", "Andrews");
+var student2 = createStudent(studentPrototype, 2, "Bill", "Billson");
 
 console.log(student1.courses);
 console.log(student1.prototype === student2.prototype);
