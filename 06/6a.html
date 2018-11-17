@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6a s15711</title>
+    <script src="6a.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="celsius-to-farhenheit">C to F</label>
+        <form id="celsius-to-farhenheit" onsubmit="convertToFahrenheit(); return false;">
+            <input type="text" id="celsiusInput"><br>
+            <input type="button" onclick="convertToFahrenheit()" value="OK"><br>
+        </form>
+        <p id="farhenheitOutput"></p>
+    </div>
+
+    <div>
+        <label for="fahrenheit-to-celsius">F to C</label>
+        <form id="farhenheit-to-celsius" onsubmit="convertToCelsius(); return false;">
+            <input type="text" id="fahrenheitInput"><br>
+            <input type="button" onclick="convertToCelsius()" value="OK"><br>
+        </form>
+        <p id="celsiusOutput"></p>
+    </div>
+</body>
+
+</html>

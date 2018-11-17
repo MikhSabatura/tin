@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6c s15711</title>
+    <script src="6c.js"></script>
+    <style>
+        .err {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form" onsubmit="return validateForm();">
+        <label for="numerical">Number:</label>
+        <input type="text" id="num-input">
+        <label for="numerical" id="num-err" class="err"></label><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email-input">
+        <label for="email" id="email-err" class="err"></label><br>
+        <input type="submit" value="OK"><br>
+    </form>
+</body>
+
+</html>

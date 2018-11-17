@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6d s15711</title>
+    <script src="6d.js"></script>
+    <style>
+        #employees {
+        margin-top: 1%;
+        border-collapse: collapse;
+        width: 40%;
+        }
+
+        #employees th {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        text-align: left;
+        background-color: rgb(82, 82, 82);
+        color: white;
+        }
+
+        #employees tr:nth-child(even) {
+        background-color: #f2f2f2;
+        }
+
+        form {
+        margin-top: 3%;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Some useless table that is not even funny:</h3>
+    <table id="employees">
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Salary</th>
+        </tr>
+        <tr>
+            <td>Andrew</td>
+            <td>Andrews</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>Bobbos</td>
+            <td>2000</td>
+        </tr>
+        <tr>
+            <td>Carl</td>
+            <td>Carlsbreg</td>
+            <td>3000</td>
+        </tr>
+    </table>
+    <form onsubmit="addTableRow(); return false;">
+        <label for="name-input">Name:</label><br>
+        <input type="text" id="name-input"><br>
+        <label for="surname-input">Surname:</label><br>
+        <input type="text" id="surname-input"><br>
+        <label for="salary-input">Salary:</label><br>
+        <input type="number" id="salary-input"><br>
+        <input type="submit" value="OK">
+    </form>
+</body>
+
+</html>
