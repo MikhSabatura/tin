@@ -1,3 +1,4 @@
+"use strict";
 var fs = require("fs");
 var dirPath = process.argv[2];
 monitorDirectory(dirPath);
