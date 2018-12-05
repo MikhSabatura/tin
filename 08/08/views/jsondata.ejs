@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jsondata</title>
+</head>
+
+<body>
+  <%- displayJson(data)%>
+<%function displayJson(obj, tabCount = 0) {
+    const tab = "&nbsp;&nbsp;&nbsp;&nbsp;";
+    const br = "<br>";
+    let leftIndent = "";
+    for (let i = 0; i < tabCount; i++) {
+        leftIndent += tab;
+    }
+    let result = "{";
+
+    for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            result += br + leftIndent + tab + `"${key}" : `;
+            if (typeof obj[key] == "object") {
+                result += displayJson(obj[key], tabCount + 1);
+            } else {
+                result += `${obj[key]}`;
+            }
+        }
+    }
+    return result += br + leftIndent + "}";
+}%>
+</body>
+
+</html>
