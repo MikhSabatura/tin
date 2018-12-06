@@ -1,10 +1,9 @@
 var express = require("express");
 var parser = require("body-parser");
 var router = express.Router();
-router.use(parser.json());
+var jsonParser = parser.json();
 
-router.post("/", function (req, res) {
-
+router.post("/", jsonParser, function (req, res) {
     res.render("jsondata", {
         data: req.body
     });
