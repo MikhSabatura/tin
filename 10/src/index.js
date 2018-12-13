@@ -38,7 +38,7 @@ function fahrenheitChangeListener() {
 }
 
 function kelvinChangeListener() {
-    let convertedTemps = tempConverter.convertFahrenheit(Number(document.getElementById(kelvinId).value));
+    let convertedTemps = tempConverter.convertKelvin(Number(document.getElementById(kelvinId).value));
     document.getElementById(celsiusId).value = convertedTemps.celsius;
     document.getElementById(fahrenheitId).value = convertedTemps.fahrenheit;
 }
