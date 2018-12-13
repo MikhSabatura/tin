@@ -26,27 +26,27 @@ function attachListeners() {
 }
 
 function celsiusChangeListener() {
-    let convertedTemps = tempConverter.convertCelsius(document.getElementById(celsiusId).value);
+    let convertedTemps = tempConverter.convertCelsius(Number(document.getElementById(celsiusId).value));
     document.getElementById(fahrenheitId).value = convertedTemps.fahrenheit;
     document.getElementById(kelvinId).value = convertedTemps.kelvin;
 }
 
 function fahrenheitChangeListener() {
-    let convertedTemps = tempConverter.convertFahrenheit(document.getElementById(fahrenheitId).value);
+    let convertedTemps = tempConverter.convertFahrenheit(Number(document.getElementById(fahrenheitId).value));
     document.getElementById(celsiusId).value = convertedTemps.celsius;
     document.getElementById(kelvinId).value = convertedTemps.kelvin;
 }
 
 function kelvinChangeListener() {
-    let convertedTemps = tempConverter.convertFahrenheit(document.getElementById(kelvinId).value);
+    let convertedTemps = tempConverter.convertFahrenheit(Number(document.getElementById(kelvinId).value));
     document.getElementById(celsiusId).value = convertedTemps.celsius;
     document.getElementById(fahrenheitId).value = convertedTemps.fahrenheit;
 }
 
 function kilometersChangeListener() {
-    document.getElementById(milesId).value = distConverter.convertKilometersToMiles(document.getElementById(kilometersId).value);
+    document.getElementById(milesId).value = distConverter.convertKilometersToMiles(Number(document.getElementById(kilometersId).value));
 }
 
 function milesChangeListener() {
-    document.getElementById(kilometersId).value = distConverter.covnertMilesToKilometers(document.getElementById(milesId).value);
+    document.getElementById(kilometersId).value = distConverter.covnertMilesToKilometers(Number(document.getElementById(milesId).value));
 }
