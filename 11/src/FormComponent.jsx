@@ -42,19 +42,21 @@ class Form extends React.Component {
     }
 
     passwordValidate(password) {
-        if (/\d/.test(password) && /[a-zA-Z]/.test(password) && password.length >= 5) {
+        if (/\d/.test(password) && /[a-zA-Z]/.test(password) && password.length > 5) {
             this.setState({ passwordValidationMessage: null });
         } else {
-            this.setState({ passwordValidationMessage: "password must contain at least one digit, character, and be at least 5 symbols long" });
+            this.setState({ passwordValidationMessage: "must have at least 1 digit, 1 character, and be longer than 5 symbols" });
         }
     }
 
     ageValidate(age) {
         age = Number(age);
-        if (!isNaN(age) && age > 18) {
-            this.setState({ ageValidationMessage: null });
-        } else {
+        if(isNaN(age)){
+            this.setState({ ageValidationMessage: "enter number" });
+        } else if(age < 18) {
             this.setState({ ageValidationMessage: "you need to be at least 18" });
+        } else {
+            this.setState({ ageValidationMessage: null });
         }
     }
 
@@ -62,9 +64,17 @@ class Form extends React.Component {
         return (
             <div>
                 <form>
-                    Email: <input type="text" id="email" onChange={this.emailHandleChange.bind(this)} /> <Text text={this.state.emailValidationMessage} /> <br />
-                    Password: <input type="password" id="password" onChange={this.passwordHandleChange.bind(this)} /> <Text text={this.state.passwordValidationMessage} /> <br />
-                    Age: <input type="text" id="age" onChange={this.ageHandleChange.bind(this)} /> <Text text={this.state.ageValidationMessage} /> <br />
+                    <label htmlFor="email" className="form-label">Email:</label>
+                    <input type="text" id="email" onChange={this.emailHandleChange.bind(this)} /> 
+                    <Text text={this.state.emailValidationMessage} className="error"/> <br />
+
+                    <label htmlFor="email" className="form-label">Password:</label>
+                    <input type="password" id="password" onChange={this.passwordHandleChange.bind(this)} /> 
+                    <Text text={this.state.passwordValidationMessage} className="error"/> <br />
+
+                    <label htmlFor="email" className="form-label">Age:</label>
+                    <input type="text" id="age" onChange={this.ageHandleChange.bind(this)} /> 
+                    <Text text={this.state.ageValidationMessage} className="error"/> <br />
                 </form> <br />
                 <FormInfo email={this.state.emailValidationMessage} password={this.state.passwordValidationMessage} age={this.state.ageValidationMessage} />
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function (props) {
-    return <span>{props.text}</span>;
+    return <span className={props.className}>{props.text}</span>;
 }

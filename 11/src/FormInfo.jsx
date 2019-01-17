@@ -1,12 +1,16 @@
 import React from "react";
 import Label from "./LabelComponent.jsx";
 
+function createValidationLabel(name, value) {
+    return <Label name = {name} value = {value ? "invalid" : "valid"} className={value ? "error" : "ok"}/>;
+}
+
 export default function(props) {
     return (
         <div>
-            <Label name = "Email" value = {props.email ? "invalid" : "valid"}/> <br/>
-            <Label name = "Password" value = {props.password ? "invalid" : "valid"}/> <br/>
-            <Label name = "Age" value = {props.age ? "invalid" : "valid"} /> <br/>
+            {createValidationLabel("Email", props.email)}<br/>
+            {createValidationLabel("Password", props.password)}<br/>
+            {createValidationLabel("Age", props.age)}<br/>
         </div>
     );
 }
