@@ -1,0 +1,19 @@
+{
+  "name": "08",
+  "version": "1.0.0",
+  "description": "",
+  "main": "8a.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mishasbtr",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslit": "^5.0.0"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-generator": "^4.16.0"
+  }
+}
